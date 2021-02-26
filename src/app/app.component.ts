@@ -14,10 +14,11 @@ export class AppComponent {
     this.items = [
       {
         label: 'Comercios',
-        icon: 'pi pi-shopping-cart'
+        icon: 'pi pi-shopping-cart',
+        routerLink: 'comercio'
       },
       {
-        label: 'Entrar',
+        label: 'Cadastrar',
         icon: 'pi pi-sign-in'
       }
     ]

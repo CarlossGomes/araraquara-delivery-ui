@@ -1,0 +1,38 @@
+<p-card header="Cadastro de Comercio">
+  <form [formGroup]="formulario">
+    <div class="card">
+      <div class="p-field p-grid">
+        <label for="nome">Nome do Comércio</label>
+        <div class="p-field p-col-12 p-md-6">
+          <input id="nome" formControlName="nome" type="text" pInputText placeholder="Digite o nome do comércio">
+          <app-field-validation [control]="formulario.controls['nome']"></app-field-validation>
+        </div>
+      </div>
+
+      <div class="p-field p-grid"></div>
+      <label for="telefone">Telefone</label>
+      <div class="p-field p-col-12 p-md-6">
+        <p-inputMask id="telefone" formControlName="telefone" mask="(99) 9999-9999" placeholder="(16) 3333-1234">
+        </p-inputMask>
+        <app-field-validation [control]="formulario.controls['telefone']"></app-field-validation>
+      </div>
+
+      <div class="p-field p-grid"></div>
+      <label for="celular">Celular</label>
+      <div class="p-field p-col-12 p-md-6">
+        <p-inputMask id="celular" formControlName="celular" mask="(99) 99999-9999" placeholder="(16) 99999-1234">
+        </p-inputMask>
+        <app-field-validation [control]="formulario.controls['celular']"></app-field-validation>
+      </div>
+
+      <div class="p-field p-grid"></div>
+      <label for="servico">Serviço</label>
+      <div class="p-field p-col-12 p-md-6">
+        <p-dropdown id="servico" formControlName="servico" [options]="services" placeholder="Selecione Serviço" optionLabel="descricao" [showClear]="true">
+        </p-dropdown>
+        <app-field-validation [control]="formulario.controls['servico']"></app-field-validation>
+      </div>
+    </div>
+  </form>
+
+</p-card>
